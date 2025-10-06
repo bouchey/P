@@ -1,0 +1,73 @@
+body {
+color: white;
+text-decoration: none;
+background-color: rgba(255, 255, 255, 0.2);
+padding: 0.5rem 1rem;
+border-radius: 5px;
+transition: background 0.3s;
+}
+
+.menu a:hover {
+background-color: rgba(255, 255, 255, 0.4);
+}
+
+main {
+max-width: 900px;
+margin: 2rem auto;
+padding: 0 1rem;
+}
+
+section {
+background: white;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+padding: 1.5rem;
+margin-bottom: 2rem;
+}
+
+section h2 {
+color: #e8a6c9;
+margin-top: 0;
+font-size: 1.4rem;
+}
+
+.liens {
+list-style: none;
+padding: 0;
+}
+
+.liens li {
+margin: 0.5rem 0;
+}
+
+.liens a {
+color: #e37fae; /* rose un peu plus foncé */
+text-decoration: none;
+border-bottom: 1px dashed #e37fae;
+transition: color 0.3s;
+}
+
+.liens a:hover {
+color: #c65d91;
+border-bottom: 1px solid #c65d91;
+}
+
+footer {
+text-align: center;
+padding: 1rem;
+font-size: 0.9rem;
+color: #e8a6c9;
+background: #fff0f6;
+border-top: 1px solid #e8a6c9;
+}
+
+@media (max-width: 600px) {
+.menu {
+flex-direction: column;
+align-items: center;
+}
+.menu li {
+width: 100%;
+text-align: center;
+}
+}
