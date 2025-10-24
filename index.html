@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Bouchera</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Portfolio Bouchera - Système d'Information</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#tds">TDs</a></li>
+                <li><a href="#cours">Cours</a></li>
+                <li><a href="#documents">Documents SI</a></li>
+                <li><a href="#certification">Certification</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#soutenance">Soutenance</a></li>
+                <li><a href="#autres">Autres ressources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="accueil">
+        <section class="intro">
+            <h2>Bienvenue sur mon Portfolio de Système d'Information</h2>
+            <p>Retrouvez ici mes TDs, cours, projets et autres ressources.</p>
+        </section>
+
+        <!-- Section des rubriques -->
+        <section class="sections">
+            <div class="card" id="tds">
+                <h3>TDs</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-tds')">
+                <ul id="liste-tds" class="liste-fichiers"></ul>
+            </div>
+
+            <div class="card" id="cours">
+                <h3>Cours</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-cours')">
+                <ul id="liste-cours" class="liste-fichiers"></ul>
+            </div>
+
+            <div class="card" id="documents">
+                <h3>Documents SI</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-docs')">
+                <ul id="liste-docs" class="liste-fichiers"></ul>
+            </div>
+
+            <div class="card" id="certification">
+                <h3>Certification</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-certif')">
+                <ul id="liste-certif" class="liste-fichiers"></ul>
+            </div>
+
+            <div class="card" id="projets">
+                <h3>Projets</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-projets')">
+                <ul id="liste-projets" class="liste-fichiers"></ul>
+            </div>
+
+            <div class="card" id="soutenance">
+                <h3>Soutenance</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-soutenance')">
+                <ul id="liste-soutenance" class="liste-fichiers"></ul>
+            </div>
+
+            <div class="card" id="autres">
+                <h3>Autres ressources</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-autres')">
+                <ul id="liste-autres" class="liste-fichiers"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>© 2025 Portfolio Bouchera Système d'Information - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        // Fonction pour afficher les fichiers ajoutés
+        function afficherFichiers(input, idListe) {
+            const liste = document.getElementById(idListe);
+            liste.innerHTML = ''; // on efface l'ancienne liste
+            for (const fichier of input.files) {
+                const li = document.createElement('li');
+                li.textContent = fichier.name;
+                liste.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
