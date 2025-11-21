@@ -1,0 +1,191 @@
+/* ----- Style global ----- */
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    background-color: #fff0f5; /* rose très clair */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- En-tête ----- */
+header {
+    background: linear-gradient(to right, #f8b4d9, #f9c6e4); /* dégradé rose clair */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+h1 i {
+    font-size: 1.2em;
+}
+
+/* ----- Menu principal ----- */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #f497c0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.menu a:hover {
+    background-color: #ec7bad;
+    transform: translateY(-2px);
+}
+
+.menu i {
+    font-size: 1.1em;
+}
+
+/* ----- Section d’introduction ----- */
+.intro {
+    text-align: center;
+    margin: 50px 20px 30px;
+}
+
+.intro h2 {
+    font-size: 1.8em;
+    color: #a0215d;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.intro i {
+    color: #d43f8d;
+}
+
+/* ----- Cartes des sections ----- */
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px 80px;
+    flex: 1;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #d43f8d;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.card i {
+    color: #ec7bad;
+    font-size: 1.2em;
+}
+
+input[type="file"] {
+    margin: 10px 0;
+}
+
+/* ----- Liste des fichiers ajoutés ----- */
+.liste-fichiers {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: left;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.liste-fichiers li {
+    background-color: #ffe4ef;
+    margin: 3px 0;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+/* ----- Pied de page ----- */
+footer {
+    background-color: #f497c0;
+    color: white;
+    text-align: center;
+    padding: 8px 0; /* plus fin */
+    width: 100%;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* ----- Animation d’apparition ----- */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----- Petits ajustements responsives ----- */
+@media (max-width: 600px) {
+    .menu {
+        gap: 10px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .intro h2 {
+        font-size: 1.5em;
+    }
+}
