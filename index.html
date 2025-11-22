@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Bouchera</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1><i class="fa-solid fa-user-graduate"></i> Portfolio Bouchera - Système d'Information</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#accueil"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li><a href="#tds"><i class="fa-solid fa-pencil"></i> TDs</a></li>
+                <li><a href="#cours"><i class="fa-solid fa-book"></i> Cours</a></li>
+                <li><a href="#documents"><i class="fa-solid fa-folder-open"></i> Documents SI</a></li>
+                <li><a href="#certification"><i class="fa-solid fa-certificate"></i> Certification</a></li>
+                <li><a href="#projets"><i class="fa-solid fa-laptop-code"></i> Projets</a></li>
+                <li><a href="#soutenance"><i class="fa-solid fa-chalkboard-user"></i> Soutenance</a></li>
+                <li><a href="#autres"><i class="fa-solid fa-box-archive"></i> Autres ressources</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="accueil">
+        <section class="intro">
+            <h2><i class="fa-solid fa-star"></i> Bienvenue sur mon Portfolio de Système d'Information</h2>
+        </section>
+
+        <!-- Section des rubriques -->
+        <section class="sections">
+
+            <div class="card" id="tds">
+                <h3><i class="fa-solid fa-pencil"></i> TDs</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-tds')">
+                <ul id="liste-tds" class="liste-fichiers"></ul>
+            </div>
+
+            <div class="card" id="cours">
+                <h3><i class="fa-solid fa-book"></i> Cours</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-cours')">
+                <ul id="liste-cours" class="liste-fichiers">
+                  <li><a href="Diagramme.pdf" target="_blank">Cours Diagramme</a></li>
+                  <li><a href="Livrables.pdf" target="_blank">Cours Livrable</a></li>
+                  <li><a href="Livrables2.pdf" target="_blank">Cours Livrable 2</a></li>
+                  <li><a href="Processus de gestion et modelisation .pdf" target="_blank">Cours Processus de gestion et de modelisation</a></li>
+                  <li><a href="SFG vs SFD.pdf" target="_blank">Cours SFG vs SFD</a></li>
+                  <li><a href="SI vs PGI.pdf" target="_blank">Cours SI vs PGI</a></li>
+                </ul>
+            </div>
+
+            <div class="card" id="documents">
+                <h3><i class="fa-solid fa-folder-open"></i> Documents SI</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-docs')">
+                <ul id="liste-docs" class="liste-fichiers"></ul>
+            </div>
+
+            <div class="card" id="certification">
+                <h3><i class="fa-solid fa-certificate"></i> Certification</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-certif')">
+                <ul id="liste-certif" class="liste-fichiers"></ul>
+            </div>
+
+            <div class="card" id="projets">
+                <h3><i class="fa-solid fa-laptop-code"></i> Projets</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-projets')">
+                <ul id="liste-projets" class="liste-fichiers"></ul>
+            </div>
+
+            <div class="card" id="soutenance">
+                <h3><i class="fa-solid fa-chalkboard-user"></i> Soutenance</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-soutenance')">
+                <ul id="liste-soutenance" class="liste-fichiers"></ul>
+            </div>
+
+            <div class="card" id="autres">
+                <h3><i class="fa-solid fa-box-archive"></i> Autres ressources</h3>
+                <input type="file" multiple onchange="afficherFichiers(this, 'liste-autres')">
+                <ul id="liste-autres" class="liste-fichiers"></ul>
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>© 2025 Portfolio Bouchera Système d'Information - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        // Fonction pour afficher les fichiers ajoutés
+        function afficherFichiers(input, idListe) {
+            const liste = document.getElementById(idListe);
+            liste.innerHTML = ''; // On efface l'ancienne liste
+
+            for (const fichier of input.files) {
+                const li = document.createElement('li');
+                li.textContent = fichier.name;
+                liste.appendChild(li);
+            }
+        }
+    </script>
+
+</body>
+</html>
