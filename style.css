@@ -1,0 +1,81 @@
+body {
+background: linear-gradient(to right, #f8b4d9, #f9c6e4);
+color: #fff;
+padding: 20px 0;
+text-align: center;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.menu {
+list-style: none;
+padding: 0;
+margin: 10px 0 0;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+
+.menu a {
+color: white;
+text-decoration: none;
+padding: 8px 12px;
+background-color: #f497c0;
+border-radius: 6px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+
+/* --- INTRO --- */
+.intro {
+text-align: center;
+margin: 40px auto;
+}
+
+
+/* --- MODULES EN COLONNE --- */
+.sections {
+    display: flex;
+    flex-direction: column; /* 1 module par ligne */
+    align-items: center;    /* centré */
+    gap: 30px;
+    padding: 0 20px 100px;
+    width: 100%;
+}
+
+
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 85%;           /* AGRANDI la taille des cartes */
+    max-width: 900px;     /* Les empêche d’être trop larges */
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+
+.card:hover {
+transform: translateY(-5px);
+}
+
+
+.card h3 {
+color: #d43f8d;
+margin-bottom: 15px;
+font-size: 1.4em;
+}
+
+
+.liste-fichiers {
+list-style: none;
+padding: 0;
+}
+}
